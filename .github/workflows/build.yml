@@ -2,7 +2,9 @@ name: build
 
 on:
   push:
-    branches: [ 'main' ]
+    branches: [ 'main', 'build' ]
+
+  workflow_dispatch:
   pull_request:
     branches: [ 'main' ]
 
@@ -14,7 +16,7 @@ jobs:
   build:
     strategy:
       matrix:
-        platform: [ubuntu-latest]
+        platform: [self-hosted]
         target: 
           - darwin-amd64
           - darwin-arm64
