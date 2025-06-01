@@ -41,7 +41,7 @@ jobs:
           go-version: '1.22'
 
       - name: Setup web
-        run: bash build.sh dev web
+        run: sudo sed -i '1inameserver 8.8.8.8' /etc/resolv.conf&&bash build.sh dev web
 
       - name: Build
         uses: go-cross/cgo-actions@v1
