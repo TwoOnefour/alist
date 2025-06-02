@@ -16,7 +16,7 @@ jobs:
   build:
     strategy:
       matrix:
-        platform: [self-hosted-lab]
+        platform: [lab]
         target: 
           - windows-amd64
           - linux-arm64-musl
