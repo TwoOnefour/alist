@@ -16,7 +16,7 @@ jobs:
   build:
     strategy:
       matrix:
-        platform: [ubuntu-22.04]
+        platform: [self-hosted]
         target: 
           - darwin-amd64
           - darwin-arm64
